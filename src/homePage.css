@@ -1,0 +1,410 @@
+/* homePage.css */
+
+/* Background with animated gradient */
+body {
+    background: linear-gradient(-45deg, #ff6ec4, #7873f5, #2193b0, #6dd5ed);
+    background-size: 400% 400%;
+    animation: gradientAnimation 15s ease infinite;
+    font-family: 'Comic Sans MS', cursive;
+    margin: 0;
+    padding: 0;
+  }
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% { 
+      background-position: 0% 50%;
+    }
+  }
+  
+  /* Headings with fun styles */
+  h1 {
+    font-size: 3em;
+    text-align: center;
+    color: #fff;
+    text-shadow: 2px 2px #ff0000;
+    margin-bottom: 10px;
+  }
+  
+  p {
+    text-align: center;
+    color: #fff;
+    font-size: 1.2em;
+    margin-bottom: 30px;
+  }
+  
+  /* Input and button styles */
+  input[type="text"] {
+    border: 3px solid #fff;
+    border-radius: 15px;
+    padding: 10px;
+    font-size: 1em;
+    width: 70%;
+    margin-right: 10px;
+  }
+  
+  button {
+    background-color: #ff6ec4;
+    color: #fff;
+    border: none;
+    border-radius: 15px;
+    padding: 12px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.3s;
+  }
+  
+  button:hover {
+    transform: scale(1.1);
+    background-color: #ff1493;
+  }
+  
+  /* Card styles */
+  .card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 25px;
+    padding: 20px;
+    max-height: 400px;
+    overflow-y: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Message styles */
+  .message {
+    padding: 1.5rem;
+    margin: 0.8rem 0;
+    border-radius: 12px;
+    animation: fadeIn 0.5s ease-in;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    white-space: pre-wrap;
+    color: #2c3e50;
+    display: block;
+    width: 100%;
+  }
+  
+  .message.user {
+    background-color: #e3f2fd;
+    margin-left: 2rem;
+    border-radius: 15px 15px 0 15px;
+  }
+  
+  .message.assistant {
+    background-color: #f5f5f5;
+    margin-right: 2rem;
+    border-radius: 15px 15px 15px 0;
+  }
+  
+  .message strong {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+  }
+  
+  .message p {
+    margin: 0.5rem 0;
+    color: #2c3e50;
+    display: block;
+    width: 100%;
+  }
+  
+  /* Code formatting within messages */
+  .message pre {
+    background-color: #2d3748;
+    color: #e2e8f0;
+    padding: 1rem;
+    border-radius: 8px;
+    margin: 0.5rem 0;
+    overflow-x: auto;
+    width: 100%;
+  }
+  
+  .message code {
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+    width: 100%;
+    display: block;
+  }
+  
+  /* Lists within messages */
+  .message ul, .message ol {
+    margin: 0.5rem 0 0.5rem 1.5rem;
+    padding-left: 1rem;
+  }
+  
+  .message li {
+    margin: 0.3rem 0;
+  }
+  
+  /* Paragraphs within messages */
+  .message p {
+    margin: 0.8rem 0;
+  }
+  
+  /* First paragraph after the strong tag */
+  .message strong + p {
+    margin-top: 0.3rem;
+  }
+  
+  :root {
+    --primary-color: #4a90e2;
+    --secondary-color: #f7b733;
+    --success-color: #2ecc71;
+    --error-color: #e74c3c;
+    --background-color: #f0f4f8;
+  }
+  
+  body {
+    background-color: var(--background-color);
+    font-family: 'Comic Sans MS', 'Chalkboard SE', sans-serif;
+  }
+  
+  h1 {
+    color: var(--primary-color);
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card {
+    background: white !important;
+    border: 3px solid var(--primary-color) !important;
+    border-radius: 15px !important;
+    padding: 1.5rem !important;
+    margin: 1rem 0;
+    min-height: 400px;
+    max-height: 500px;
+    overflow-y: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+  }
+  
+  input[type="text"] {
+    border: 2px solid var(--primary-color) !important;
+    border-radius: 10px !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+  }
+  
+  input[type="text"]:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.3);
+  }
+  
+  button {
+    border-radius: 10px !important;
+    padding: 0.75rem 1.5rem !important;
+    font-weight: bold !important;
+    transition: all 0.3s ease !important;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  
+  button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .bg-red-500 {
+    background-color: var(--error-color) !important;
+  }
+  
+  /* Custom scrollbar */
+  .card::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  .card::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+  }
+  
+  .card::-webkit-scrollbar-thumb {
+    background: var(--primary-color);
+    border-radius: 10px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive design */
+  @media (max-width: 640px) {
+    .container {
+      margin: 1rem;
+      padding: 1rem;
+    }
+    
+    h1 {
+      font-size: 2rem;
+    }
+    
+    .message {
+      padding: 0.75rem;
+    }
+  }
+  
+  /* Session buttons */
+  .bg-green-500 {
+    background-color: var(--success-color) !important;
+  }
+
+  .bg-green-500:hover {
+    background-color: #27ae60 !important;
+  }
+
+  .bg-yellow-500 {
+    background-color: var(--secondary-color) !important;
+  }
+
+  .bg-yellow-500:hover {
+    background-color: #f39c12 !important;
+  }
+
+  /* Assignment section */
+  .assignment-section {
+    animation: slideUp 0.5s ease-out;
+    width: 100%;
+  }
+
+  .assignment-section .card {
+    background: white !important;
+    padding: 2rem !important;
+    width: 100% !important;
+  }
+
+  .assignment-section h2 {
+    color: var(--primary-color);
+    text-align: center;
+    margin-bottom: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .assignment-content {
+    color: #2c3e50;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    white-space: pre-wrap;
+    width: 100%;
+    display: block;
+  }
+
+  .assignment-content p {
+    margin: 0.8rem 0;
+    color: #2c3e50;
+  }
+
+  .assignment-section pre {
+    margin: 1rem 0;
+    padding: 1.5rem;
+    background-color: #2d3748;
+    border-radius: 10px;
+    overflow-x: auto;
+    color: #e2e8f0;
+    width: 100%;
+  }
+
+  .assignment-section code {
+    color: #e2e8f0;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.95em;
+    width: 100%;
+    display: block;
+  }
+
+  @keyframes slideUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  /* Session management */
+  .text-center button {
+    margin: 0.5rem;
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
+
+  /* Responsive adjustments */
+  @media (max-width: 640px) {
+    .text-center button {
+      width: 100%;
+      margin: 0.5rem 0;
+    }
+  }
+
+  /* Message content styles */
+  .message-content {
+    display: block;
+    width: 100%;
+    color: #2c3e50;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-top: 0.5rem;
+  }
+
+  .message-content p {
+    margin: 0.5rem 0;
+    padding: 0;
+    color: inherit;
+  }
+
+  .message-content pre {
+    background-color: #2d3748;
+    padding: 1rem;
+    border-radius: 8px;
+    overflow-x: auto;
+    margin: 0.8rem 0;
+  }
+
+  .message-content code {
+    color: #e2e8f0;
+    font-family: 'Consolas', 'Monaco', monospace;
+    font-size: 0.9em;
+  }
+
+  /* Ensure container is full width */
+  .container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+  }
+
+  /* Ensure card takes full width */
+  .card {
+    width: 100% !important;
+    box-sizing: border-box;
+  }
